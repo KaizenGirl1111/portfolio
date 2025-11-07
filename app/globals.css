@@ -1,15 +1,15 @@
 @import "tailwindcss";
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
-  --background: #ffffff;
+ /*--background: #ffffff;*/
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +19,39 @@
   }
 }
 
+@font-face{
+  font-family:'helvetica';
+  src: url('/assets/fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face{
+  font-family:'old-london';
+  src: url('/assets/fonts/OldLondon.ttf') format('truetype');
+}
+
+@font-face{
+  font-family:'times-new-roman';
+  src: url('/assets/fonts/times-new-roman.ttf') format('truetype');
+}
+
+@font-face{
+  font-family:'impact';
+  src: url('/assets/fonts/impact.ttf') format('truetype');
+}
+
+@font-face{
+  font-family:'canopee';
+  src: url('/assets/fonts/Canopee-regular.otf') format('opentype');
+}
+
+@font-face{
+  font-family:'editorial-regular';
+  src: url('/assets/fonts/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
+}
+
+
 body {
-  background: var(--background);
+ /* background: var(--background);*/
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+ /* font-family: Arial, Helvetica, sans-serif;*/
 }
