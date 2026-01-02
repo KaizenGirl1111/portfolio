@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import './globals.css'
-//import '@/app/ui/global.css';
+import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Avni Uplabdhee",
@@ -14,9 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://kit.fontawesome.com/22081ad1bb.js" async/>
+      </head>
       <body className="bg-[url('/bg/paper-texture.png')] bg-cover bg-fixed bg-center bg-no-repeat">
         {children}
+        <Toaster position="bottom-center" toastOptions={{ duration: 4000 }} />
       </body>
+      <Script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-triangles@3/tsparticles.preset.triangles.bundle.min.js"/>
+
     </html>
+    
   );
 }

@@ -1,0 +1,37 @@
+.container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    gap:1.25rem;
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+.title{
+ font-family:'Times New Roman', Times, serif;
+ font-weight:800;
+ font-size:3rem;
+ padding-bottom:0.75rem;
+}
+.section{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    font-family:'editorial-regular'
+}
+
+.section1{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    font-family:'editorial-regular'
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); } to { transform: rotate(360deg); }
+}
+
+.anim-style{
+   transform-origin: 175px 175px;
+   animation: spin 8s  linear infinite;
+}

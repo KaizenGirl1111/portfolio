@@ -1,0 +1,12 @@
+.section {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 650ms cubic-bezier(.2,.9,.3,1), transform 650ms cubic-bezier(.2,.9,.3,1);
+  will-change: opacity, transform;
+}
+.section.in-view { opacity: 1; transform: translateY(0); }
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .section { transition: none; transform: none; opacity: 1; }
+}
